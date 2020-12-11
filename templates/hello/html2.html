@@ -1,0 +1,30 @@
+{% extends 'HelloHtml/hellohtml.html' %}
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Another Html</title>
+
+</head>
+<body>
+<div class="container">
+    {% block body_block %}
+    <a href="html1.html">link</a>
+    <h3>Let start Registration.</h3>
+    {{ insert }}
+    <form action="html1.html">
+        <ul>
+            Name:       <input type="'text", name="name", placeholder="ENTER NAME"><br>
+            UserName:   <input type="text", name="username", placeholder="USERNAME"><br>
+            Password:   <input type="password", name="password", placeholder="PASSWORD"><br>
+            Email:      <input type="email", name="email", placeholder="EMAIL"><br>
+                    <input type="submit", name="submit", value="DONE">
+        </ul>
+    </form>
+    {% endblock %}
+</div>
+</body>
+</html>

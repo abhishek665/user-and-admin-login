@@ -1,0 +1,23 @@
+{% extends "hello/base.html" %}
+{% block body_block %}
+{% load staticfiles %}
+<div class="jumbotron">
+    <h2>MYSITE HELLO PROJECTS</h2>
+
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            {% for i in obj %}
+            <h2>{{ i.Firstname }}</h2>
+            <p>{{ i.Lastname }}</p>
+            <p>{{ i.num }}</p>
+            <a href="{% url 'hello:edit_account' %}">update</a>
+            <a href="{% url 'hello:show_db' %}">show</a>
+            <hr>
+        </div>
+   </div>
+</div>
+{% endfor %}
+
+{% endblock %}
